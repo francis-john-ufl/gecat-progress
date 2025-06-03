@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gecat data progress</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<h1>Gecat data progress</h1><p>Datapoints: 18151 out of 62681445150787353515625.</p><p> 2.90e-19% complete.</p><div style='display: flex; flex-direction: row;'><div style='padding: 1rem;'>
+<h2 onclick="toggleVisibility('phantoms')">Phantoms</h2>
+<p>Datapoints: 1<button style="margin-left: 1rem;" onclick="toggleVisibility('phantoms')">Details</button></p><ul id="phantoms" class="hidden">
+<li>AF_H165_W65 </li>
+</ul>
+
+<h2 onclick="toggleVisibility('radionuclides')">Radionuclides</h2>
+<p>Datapoints: 5<button style="margin-left: 1rem;" onclick="toggleVisibility('radionuclides')">Details</button></p><ul id="radionuclides" class="hidden">
+<li>Co60 </li>
+<li>I131 </li>
+<li>Ir192 </li>
+<li>Cs137 </li>
+<li>Am241 </li>
+</ul>
+
+<h2 onclick="toggleVisibility('size_solubilities')">Size_solubilities</h2>
+<p>Datapoints: 9<button style="margin-left: 1rem;" onclick="toggleVisibility('size_solubilities')">Details</button></p><ul id="size_solubilities" class="hidden">
+<li>1um_fast </li>
+<li>1um_medium </li>
+<li>1um_slow </li>
+<li>3um_fast </li>
+<li>3um_medium </li>
+<li>3um_slow </li>
+<li>5um_fast </li>
+<li>5um_medium </li>
+<li>5um_slow </li>
+</ul>
+
+<h2 onclick="toggleVisibility('organs')">Organs</h2>
+<p>Datapoints: 65<button style="margin-left: 1rem;" onclick="toggleVisibility('organs')">Details</button></p><ul id="organs" class="hidden">
+<li>ET1-sur </li>
+<li>ET2-sur </li>
+<li>ET2-bnd </li>
+<li>ET2-seq </li>
+<li>Bronchi </li>
+<li>Bronchi-b </li>
+<li>Bronchi-q </li>
+<li>Brchiole </li>
+<li>Brchiole-b </li>
+<li>Brchiole-q </li>
+<li>LN-Th </li>
+<li>LN-ET </li>
+<li>Oesophag-s </li>
+<li>Blood </li>
+<li>Liver </li>
+<li>Kidneys </li>
+<li>T-bone-S </li>
+<li>C-bone-S </li>
+<li>T-bone-V </li>
+<li>C-bone-V </li>
+<li>T-marrow </li>
+<li>C-marrow </li>
+<li>St-cont </li>
+<li>SI-cont </li>
+<li>RC-cont </li>
+<li>LC-cont </li>
+<li>RS-cont </li>
+<li>UB-cont </li>
+<li>Ovaries </li>
+<li>O-mucosa </li>
+<li>Teeth-V </li>
+<li>Tonsils </li>
+<li>Oesophag-w </li>
+<li>St-wall </li>
+<li>SI-wall </li>
+<li>RC-wall </li>
+<li>LC-wall </li>
+<li>RS-wall </li>
+<li>Adrenals </li>
+<li>R-marrow </li>
+<li>Y-marrow </li>
+<li>Brain </li>
+<li>Breast </li>
+<li>Eye-lens </li>
+<li>GB-wall </li>
+<li>Ht-wall </li>
+<li>LN-Sys </li>
+<li>Pancreas </li>
+<li>P-gland </li>
+<li>Prostate </li>
+<li>S-glands </li>
+<li>Skin </li>
+<li>Spleen </li>
+<li>Testes </li>
+<li>Thymus </li>
+<li>Thyroid </li>
+<li>Ureters </li>
+<li>UB-wall </li>
+<li>Uterus </li>
+<li>Adipose </li>
+<li>Cartilage </li>
+<li>Muscle </li>
+<li>ET1-wall </li>
+<li>ET2-wall </li>
+<li>ALV </li>
+</ul>
+
+<h2 onclick="toggleVisibility('screening_positions')">Screening_positions</h2>
+<p>Datapoints: 15<button style="margin-left: 1rem;" onclick="toggleVisibility('screening_positions')">Details</button></p><ul id="screening_positions" class="hidden">
+<li>chest_posterior_6cm </li>
+<li>chest_anterior_6cm </li>
+<li>chest_posterior_30cm </li>
+<li>chest_anterior_30cm </li>
+<li>chest_posterior_100cm </li>
+<li>chest_anterior_100cm </li>
+<li>abdomen_posterior_6cm </li>
+<li>abdomen_anterior_6cm </li>
+<li>abdomen_posterior_30cm </li>
+<li>abdomen_anterior_30cm </li>
+<li>abdomen_posterior_100cm </li>
+<li>abdomen_anterior_100cm </li>
+<li>thyroid_anterior_6cm </li>
+<li>thyroid_anterior_30cm </li>
+<li>thyroid_anterior_100cm </li>
+</ul>
+
+<h2 onclick="toggleVisibility('detectors')">Detectors</h2>
+<p>Datapoints: 7<button style="margin-left: 1rem;" onclick="toggleVisibility('detectors')">Details</button></p><ul id="detectors" class="hidden">
+<li>ludlum44-2 </li>
+<li>ludlum44-9 </li>
+<li>ludlum133-6 </li>
+<li>ludlum26-3 </li>
+<li>ludlum26s </li>
+<li>mirionBG </li>
+<li>mirionPXP </li>
+</ul>
+
+<h2 onclick="toggleVisibility('timesteps')">Timesteps</h2>
+<p>Datapoints: 275<button style="margin-left: 1rem;" onclick="toggleVisibility('timesteps')">Details</button></p><ul id="timesteps" class="hidden">
+<li>0.0 </li>
+<li>0.041667 </li>
+<li>0.083333 </li>
+<li>0.125 </li>
+<li>0.25 </li>
+<li>0.375 </li>
+<li>0.5 </li>
+<li>0.625 </li>
+<li>0.75 </li>
+<li>0.875 </li>
+<li>1.0 </li>
+<li>1.125 </li>
+<li>1.25 </li>
+<li>1.375 </li>
+<li>1.5 </li>
+<li>1.625 </li>
+<li>1.75 </li>
+<li>1.875 </li>
+<li>2.0 </li>
+<li>2.25 </li>
+<li>2.5 </li>
+<li>2.75 </li>
+<li>3.0 </li>
+<li>3.25 </li>
+<li>3.5 </li>
+<li>3.75 </li>
+<li>4.0 </li>
+<li>4.25 </li>
+<li>4.5 </li>
+<li>4.75 </li>
+<li>5.0 </li>
+<li>5.5 </li>
+<li>6.0 </li>
+<li>6.5 </li>
+<li>7.0 </li>
+<li>7.5 </li>
+<li>8.0 </li>
+<li>8.5 </li>
+<li>9.0 </li>
+<li>9.5 </li>
+<li>10.0 </li>
+<li>11.0 </li>
+<li>12.0 </li>
+<li>13.0 </li>
+<li>14.0 </li>
+<li>15.0 </li>
+<li>16.0 </li>
+<li>17.0 </li>
+<li>18.0 </li>
+<li>19.0 </li>
+<li>20.0 </li>
+<li>21.0 </li>
+<li>22.0 </li>
+<li>23.0 </li>
+<li>24.0 </li>
+<li>25.0 </li>
+<li>26.0 </li>
+<li>27.0 </li>
+<li>28.0 </li>
+<li>29.0 </li>
+<li>30.0 </li>
+<li>31.0 </li>
+<li>32.0 </li>
+<li>33.0 </li>
+<li>34.0 </li>
+<li>35.0 </li>
+<li>36.0 </li>
+<li>37.0 </li>
+<li>38.0 </li>
+<li>39.0 </li>
+<li>40.0 </li>
+<li>41.0 </li>
+<li>42.0 </li>
+<li>43.0 </li>
+<li>44.0 </li>
+<li>45.0 </li>
+<li>46.0 </li>
+<li>47.0 </li>
+<li>48.0 </li>
+<li>49.0 </li>
+<li>50.0 </li>
+<li>51.0 </li>
+<li>52.0 </li>
+<li>53.0 </li>
+<li>54.0 </li>
+<li>55.0 </li>
+<li>56.0 </li>
+<li>57.0 </li>
+<li>58.0 </li>
+<li>59.0 </li>
+<li>60.0 </li>
+<li>61.0 </li>
+<li>62.0 </li>
+<li>63.0 </li>
+<li>64.0 </li>
+<li>65.0 </li>
+<li>66.0 </li>
+<li>67.0 </li>
+<li>68.0 </li>
+<li>69.0 </li>
+<li>70.0 </li>
+<li>71.0 </li>
+<li>72.0 </li>
+<li>73.0 </li>
+<li>74.0 </li>
+<li>75.0 </li>
+<li>76.0 </li>
+<li>77.0 </li>
+<li>78.0 </li>
+<li>79.0 </li>
+<li>80.0 </li>
+<li>81.0 </li>
+<li>82.0 </li>
+<li>83.0 </li>
+<li>84.0 </li>
+<li>85.0 </li>
+<li>86.0 </li>
+<li>87.0 </li>
+<li>88.0 </li>
+<li>89.0 </li>
+<li>90.0 </li>
+<li>91.0 </li>
+<li>92.0 </li>
+<li>93.0 </li>
+<li>94.0 </li>
+<li>95.0 </li>
+<li>96.0 </li>
+<li>97.0 </li>
+<li>98.0 </li>
+<li>99.0 </li>
+<li>100.0 </li>
+<li>110.0 </li>
+<li>120.0 </li>
+<li>130.0 </li>
+<li>140.0 </li>
+<li>150.0 </li>
+<li>160.0 </li>
+<li>170.0 </li>
+<li>180.0 </li>
+<li>190.0 </li>
+<li>200.0 </li>
+<li>210.0 </li>
+<li>220.0 </li>
+<li>230.0 </li>
+<li>240.0 </li>
+<li>250.0 </li>
+<li>260.0 </li>
+<li>270.0 </li>
+<li>280.0 </li>
+<li>290.0 </li>
+<li>300.0 </li>
+<li>310.0 </li>
+<li>320.0 </li>
+<li>330.0 </li>
+<li>340.0 </li>
+<li>350.0 </li>
+<li>360.0 </li>
+<li>365.0 </li>
+<li>370.0 </li>
+<li>380.0 </li>
+<li>390.0 </li>
+<li>400.0 </li>
+<li>410.0 </li>
+<li>420.0 </li>
+<li>430.0 </li>
+<li>440.0 </li>
+<li>450.0 </li>
+<li>460.0 </li>
+<li>470.0 </li>
+<li>480.0 </li>
+<li>490.0 </li>
+<li>500.0 </li>
+<li>510.0 </li>
+<li>520.0 </li>
+<li>530.0 </li>
+<li>540.0 </li>
+<li>550.0 </li>
+<li>560.0 </li>
+<li>570.0 </li>
+<li>580.0 </li>
+<li>590.0 </li>
+<li>600.0 </li>
+<li>610.0 </li>
+<li>620.0 </li>
+<li>630.0 </li>
+<li>640.0 </li>
+<li>650.0 </li>
+<li>660.0 </li>
+<li>670.0 </li>
+<li>680.0 </li>
+<li>690.0 </li>
+<li>700.0 </li>
+<li>710.0 </li>
+<li>720.0 </li>
+<li>730.0 </li>
+<li>740.0 </li>
+<li>750.0 </li>
+<li>760.0 </li>
+<li>770.0 </li>
+<li>780.0 </li>
+<li>790.0 </li>
+<li>800.0 </li>
+<li>810.0 </li>
+<li>820.0 </li>
+<li>830.0 </li>
+<li>840.0 </li>
+<li>850.0 </li>
+<li>860.0 </li>
+<li>870.0 </li>
+<li>880.0 </li>
+<li>890.0 </li>
+<li>900.0 </li>
+<li>910.0 </li>
+<li>920.0 </li>
+<li>930.0 </li>
+<li>940.0 </li>
+<li>950.0 </li>
+<li>960.0 </li>
+<li>970.0 </li>
+<li>980.0 </li>
+<li>990.0 </li>
+<li>1000.0 </li>
+<li>1010.0 </li>
+<li>1020.0 </li>
+<li>1030.0 </li>
+<li>1040.0 </li>
+<li>1050.0 </li>
+<li>1060.0 </li>
+<li>1070.0 </li>
+<li>1080.0 </li>
+<li>1090.0 </li>
+<li>1095.0 </li>
+<li>1100.0 </li>
+<li>1200.0 </li>
+<li>1300.0 </li>
+<li>1400.0 </li>
+<li>1500.0 </li>
+<li>1600.0 </li>
+<li>1700.0 </li>
+<li>1800.0 </li>
+<li>1900.0 </li>
+<li>2000.0 </li>
+<li>2100.0 </li>
+<li>2200.0 </li>
+<li>2300.0 </li>
+<li>2400.0 </li>
+<li>2500.0 </li>
+<li>2600.0 </li>
+<li>2700.0 </li>
+<li>2800.0 </li>
+<li>2900.0 </li>
+<li>3000.0 </li>
+<li>3100.0 </li>
+<li>3200.0 </li>
+<li>3300.0 </li>
+<li>3400.0 </li>
+<li>3500.0 </li>
+<li>3600.0 </li>
+<li>3650.0 </li>
+<li>4000.0 </li>
+<li>5000.0 </li>
+<li>6000.0 </li>
+<li>7000.0 </li>
+<li>8000.0 </li>
+<li>9000.0 </li>
+<li>10000.0 </li>
+<li>11000.0 </li>
+<li>12000.0 </li>
+<li>13000.0 </li>
+<li>14000.0 </li>
+<li>15000.0 </li>
+<li>16000.0 </li>
+<li>17000.0 </li>
+<li>18000.0 </li>
+<li>18250.0 </li>
+</ul>
+</div><div>
+<h2>Dc_total_body</h2>
+<p>Datapoints: 0 out of 45<button style="margin-left: 1rem;" onclick="toggleVisibility('dc_total_body')">Details</button></p><ul id="dc_total_body" class="hidden">
+<li>size_solubilities </li>
+<li>radionuclides </li>
+<li>phantoms </li>
+</ul>
+
+<h2>Dc_lung</h2>
+<p>Datapoints: 0 out of 45<button style="margin-left: 1rem;" onclick="toggleVisibility('dc_lung')">Details</button></p><ul id="dc_lung" class="hidden">
+<li>size_solubilities </li>
+<li>radionuclides </li>
+<li>phantoms </li>
+</ul>
+
+<h2>Dc_small_intestine</h2>
+<p>Datapoints: 0 out of 45<button style="margin-left: 1rem;" onclick="toggleVisibility('dc_small_intestine')">Details</button></p><ul id="dc_small_intestine" class="hidden">
+<li>size_solubilities </li>
+<li>radionuclides </li>
+<li>phantoms </li>
+</ul>
+
+<h2>Dc_bone_marrow</h2>
+<p>Datapoints: 0 out of 45<button style="margin-left: 1rem;" onclick="toggleVisibility('dc_bone_marrow')">Details</button></p><ul id="dc_bone_marrow" class="hidden">
+<li>size_solubilities </li>
+<li>radionuclides </li>
+<li>phantoms </li>
+</ul>
+
+<h2>Dc_thyroid</h2>
+<p>Datapoints: 0 out of 45<button style="margin-left: 1rem;" onclick="toggleVisibility('dc_thyroid')">Details</button></p><ul id="dc_thyroid" class="hidden">
+<li>size_solubilities </li>
+<li>radionuclides </li>
+<li>phantoms </li>
+</ul>
+
+<h2>Detector_efficiencies</h2>
+<p>Datapoints: 0 out of 34125<button style="margin-left: 1rem;" onclick="toggleVisibility('detector_efficiencies')">Details</button></p><ul id="detector_efficiencies" class="hidden">
+<li>detectors </li>
+<li>phantoms </li>
+<li>organs </li>
+<li>screening_positions </li>
+<li>radionuclides </li>
+</ul>
+
+<h2>Organ_activity_fractions</h2>
+<p>Datapoints: 17875 out of 804375<button style="margin-left: 1rem;" onclick="toggleVisibility('organ_activity_fractions')">Details</button></p><ul id="organ_activity_fractions" class="hidden">
+<li>size_solubilities </li>
+<li>timesteps </li>
+<li>phantoms </li>
+<li>organs </li>
+<li>radionuclides </li>
+</ul>
+
+<h2>Total_body_activity_fractions</h2>
+<p>Datapoints: 275 out of 12375<button style="margin-left: 1rem;" onclick="toggleVisibility('total_body_activity_fractions')">Details</button></p><ul id="total_body_activity_fractions" class="hidden">
+<li>size_solubilities </li>
+<li>timesteps </li>
+<li>phantoms </li>
+<li>radionuclides </li>
+</ul>
+</div></div>
+</body>
+<script>
+  function toggleVisibility(id) {
+    document.getElementById(id).classList.toggle("hidden")
+  }
+</script>
+</html>
